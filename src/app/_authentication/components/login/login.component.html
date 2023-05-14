@@ -1,0 +1,36 @@
+<!-- -->
+
+<mat-card class="authentication-card">
+    <mat-card-header class="card-header">
+      <mat-card-title class="card-title">Sign in</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="auth-form">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" name="email">
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required')">This field is required</mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Enter Valid Email address</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" name="password" type="password">
+            <mat-error *ngIf="loginForm.get('password')?.hasError('required')">This field is required</mat-error>
+            <mat-error *ngIf="loginForm.value.password">Password must be a combination of lower-case, upper-case, numbers and at least 9 characters long</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="auth-actions">
+            <button mat-raised-button color="primary" type="submit">Log In</button>
+            <p class="login-text">Not a member? <a href="/register" ><u>Register here</u></a></p>
+        </div>
+        
+      </form> 
+    </mat-card-content>
+    <!-- <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions> -->
+  </mat-card>

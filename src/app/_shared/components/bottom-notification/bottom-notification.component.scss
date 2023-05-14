@@ -1,0 +1,15 @@
+::ng-deep{
+    .mat-bottom-sheet-container {
+        background: #f44336;
+        color: #fff;
+    }
+}
+
+.bottom-notification{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .message{
+        margin-bottom: 0;
+    }
+}

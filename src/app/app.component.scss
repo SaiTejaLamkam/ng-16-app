@@ -1,0 +1,18 @@
+
+.receipe-app{
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    .main-body{
+        overflow: auto;
+        height: 100%;
+        .route-content{
+            margin: 16px;
+        }
+    }
+}
+
+.receipe-app.authentication{
+    background-color: #673ab7;
+}

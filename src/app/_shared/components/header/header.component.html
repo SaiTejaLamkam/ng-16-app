@@ -1,0 +1,19 @@
+<mat-toolbar class="header" [ngClass]="{'mat-elevation-z5' : true}" color="primary">
+  <div class="header-left">
+    <img src="assets/images/cook-book.png" />
+    <h2 class="title">Receipebook</h2>
+  </div>
+
+  <div class="header-right">
+    <button mat-flat-button [matMenuTriggerFor]="menu" aria-label="profile-button" class="profile-button" *ngIf="isLoggedIn">
+      <span>{{userDetails.name}}</span><mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+

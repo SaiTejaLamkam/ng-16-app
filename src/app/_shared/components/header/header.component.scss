@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-left, .header-right{
+        display: flex;
+        align-items: center;
+    }
+    img{
+        height: 50px;
+    }
+    .title{
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+
+    .header-right{
+        .profile-button{
+            width: auto;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            background: transparent;
+            color: white;
+            span{
+                margin-right: 15px;
+            }
+        }
+    }
+}
